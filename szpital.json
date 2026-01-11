@@ -1,0 +1,225 @@
+
+    {
+        "pietro0": [
+            {
+                "id": "p0_1",
+                "nazwa": "Recepcja / SOR",
+                "sprzet": [
+                    {
+                        "nazwa": "Komputer do rejestracji",
+                        "opis": "Urządzenie, które pozwala na rejestracje pacjentów oraz zarządzanie kolejką",
+                        "zdjecie": "4_images/komputerdorejestracji.png"
+                    },
+                    {
+                        "nazwa": "Defibrylator",
+                        "opis": "Urządzenie służące do przeprowadzania defibrylacji serca pacjenta",
+                        "zdjecie": "4_images/defibrylator.png"
+                    },
+                    {
+                        "nazwa": "Łóżko szpitalne",
+                        "opis": "Łóżko, na którym leży pacjent",
+                        "zdjecie": "4_images/lozkoszpitalne.png"
+                    }
+                ]
+            },
+            {
+                "id": "p0_2",
+                "nazwa": "Diagnostyka obrazowa",
+                "sprzet": [
+                    {
+                        "nazwa": "Rezonans Magentyczny (MRI)",
+                        "opis": "Skaner, umożliwiający bezinwazyjne badanie wnętrza pacjenta",
+                        "zdjecie": "4_images/mri.png"
+                    },
+                    {
+                        "nazwa": "Rentgen (RTG)",
+                        "opis": "Aparat, który umożliwia robienie zdjęć układu kostnego",
+                        "zdjecie": "4_images/rtg.png"
+                    },
+                    {
+                        "nazwa": "Tomograf komputerowy (CT)",
+                        "opis": "Urządzenie, które generuje szczegółowe obrazy przekrojowe pacjenta",
+                        "zdjecie": "4_images/ct.png"
+                    }
+                ]
+            },
+            {
+                "id": "p0_3",
+                "nazwa": "Pediatria",
+                "sprzet": [
+                    {
+                        "nazwa": "Stetoskop",
+                        "opis": "Pozwala analizować dźwięki z wnętrza ciała pacjenta np. bicie serca",
+                        "zdjecie": "4_images/stetoskop.png"
+                    },
+                    {
+                        "nazwa": "Otoskop",
+                        "opis": "Urządzenie do badania uszu",
+                        "zdjecie": "4_images/otoskop.png"
+                    },
+                    {
+                        "nazwa": "Waga niemowlęca",
+                        "opis": "Waga w kształcie wanienki, które pozwala na sprawdzenie masy ciała dziecka",
+                        "zdjecie": "4_images/waganiemowleca.png"
+                    },
+                    {
+                        "nazwa": "Pulsoksymetr",
+                        "opis": "Specjalne czujniki mierzące puls",
+                        "zdjecie": "4_images/pulsoksymetr.png"
+                    }
+                ]
+            },
+            {
+                "id": "p0_4",
+                "nazwa": "Dyżurka Pielęgniarek",
+                "sprzet": [
+                    {
+                        "nazwa": "Szatnia",
+                        "opis": "Miejsce, w którym pielęgniarki mogą przebrać się w swoją odzież szpitalną",
+                        "zdjecie": "4_images/szatnia.png"
+                    },
+                    {
+                        "nazwa": "Księga Raportów Pielęgniarskich",
+                        "opis": "Księga, w której pielęgniarki zapisują przebieg dyżuru itp.",
+                        "zdjecie": "4_images/ksiega.png"
+                    },
+                    {
+                        "nazwa": "Szafa Pancerna",
+                        "opis": "Szafa zamknięta na klucz, w której trzymane są bardzo mocne leki opioidowe lub psychotropowe",
+                        "zdjecie": "4_images/szafapancerna.png"
+                    },
+                    {
+                        "nazwa": "Lodówka na Leki",
+                        "opis": "Specjalna lodówka, w której trzymane są leki wymagające przechowywania w niższej temperaturze",
+                        "zdjecie": "4_images/lodowka.png"
+                    },
+                    {
+                        "nazwa": "Glukometr",
+                        "opis": "Urządzenie, które pozwala na szybki pomiar cukru w krwi",
+                        "zdjecie": "4_images/glukometr.png"
+                    },
+                    {
+                        "nazwa": "Tacka na Leki",
+                        "opis": "Tacka z wgłebieniami służąca do rozkładania leków dla poszczególnych pacjentów",
+                        "zdjecie": "4_images/tacka.png"
+                    }
+                ]
+            }
+        ],
+        "pietro1": [
+            {
+                "id": "p1_1",
+                "nazwa": "Oddział Kardiologii",
+                "sprzet": [
+                    {
+                        "nazwa": "Elektrokardiograf (EKG)",
+                        "opis": "Urządzenie do badania czynności elektrycznej serca",
+                        "zdjecie": "4_images/ekg.png"
+                    },
+                    {
+                        "nazwa": "Kardiomonitor",
+                        "opis": "Monitor, na którym pokazują sie parametry: tętno, saturacja, ciśnienie",
+                        "zdjecie": "4_images/kardiomonitor.png"
+                    },
+                    {
+                        "nazwa": "Pompy infuzyjne",
+                        "opis": "Precyzyjne urządzenie służące do podawania leków",
+                        "zdjecie": "4_images/pompainfuzyjna.png"
+                    },
+                    {
+                        "nazwa": "Respirator",
+                        "opis": "Urządzenie, służące do mechanicznej wentyklacji płuc",
+                        "zdjecie": "4_images/respirator.png"
+                    }
+                ]
+            },
+            {
+                "id": "p1_2",
+                "nazwa": "Oddział Onkologii",
+                "sprzet": [
+                    {
+                        "nazwa": "Zaawansowana pompa infuzyjna",
+                        "opis": "Pompy podające specjalistyczne leki (chemię)",
+                        "zdjecie": "4_images/zaawansowanapompainfuzyjna.png"
+                    },
+                    {
+                        "nazwa": "Porty naczyniowe",
+                        "opis": "Port wszywany pod skórę, oszczędzający żyły obwodowe pacjenta",
+                        "zdjecie": "4_images/portnaczyniowy.png"
+                    },
+                    {
+                        "nazwa": "System zamknięty do podaży leków",
+                        "opis": "Specjalne dreny i łącza, zapobiegające wydostawaniu się toksycznego leku na zewnątrz",
+                        "zdjecie": "4_images/systemzamknietydopodazylekow.png"
+                    }
+                ]
+            },
+            {
+                "id": "p1_3",
+                "nazwa": "Oddział neurologii",
+                "sprzet": [
+                    {
+                        "nazwa": "Aparat EEG (Elektroencefalograf)",
+                        "opis": "Aparat, który rejestruje fale mózgowe pacjenta",
+                        "zdjecie": "4_images/eeg.png"
+                    },
+                    {
+                        "nazwa": "USG Doppler",
+                        "opis": "Urządzenie, służące do oceny przepływu krwi w tętnicach doprowadzających krew do mózgu",
+                        "zdjecie": "4_images/usgdoppler.png"
+                    },
+                    {
+                        "nazwa": "Aparat EMG (Elektromiograf)",
+                        "opis": "Urządzenie służące do diagnozowania i badania czynności elektrycznej mięśni oraz nerwów obwodowych",
+                        "zdjecie": "4_images/emgeng.png"
+                    },
+                    {
+                        "nazwa": "Aparat ENG (Elektroneurograf)",
+                        "opis": "Urządzenie oceniające funkcję nerwów obwodowych",
+                        "zdjecie": "4_images/emgeng.png"
+                    }
+                ]
+            },
+            {
+                "id": "p1_4",
+                "nazwa": "Blok Operacyjny",
+                "sprzet": [
+                    {
+                        "nazwa": "Stół operacyjny",
+                        "opis": "Wąski, sterowany elektrycznie stół, na którym leży pacjent podczas operacji",
+                        "zdjecie": "4_images/stoloperacyjny.png"
+                    },
+                    {
+                        "nazwa": "Lampy operacyjne",
+                        "opis": "Ogromne wiszące nad stołem lampy, które nie robią cienia",
+                        "zdjecie": "4_images/lampyoperacyjne.png"
+                    },
+                    {
+                        "nazwa": "Aparat do znieczulania",
+                        "opis": "Urządzenie, które miesza gazy medyczne z gazami usypiającymi i wtłacza je do płuc pacjenta",
+                        "zdjecie": "4_images/aparatdoznieczulenia.png"
+                    },
+                    {
+                        "nazwa": "Ramię C",
+                        "opis": "Aparat rentgenowski w kształcie litery C na kółkach",
+                        "zdjecie": "4_images/ramieC.png"
+                    },
+                    {
+                        "nazwa": "Ssak operacyjny",
+                        "opis": "Głośne urządzenie, które w swoich zbiornikach zbiera krew i płyny pacjenta",
+                        "zdjecie": "4_images/ssakoperacyjny.png"
+                    },
+                    {
+                        "nazwa": "Diatermia chirurgiczna (Nóż elektryczny)",
+                        "opis": "Używa prądu o wysokiej częstotliwości, który jednocześnie tnie tkankę i zamyka naczynia krwionośne",
+                        "zdjecie": "4_images/diatermiachirurgiczna.png"
+                    },
+                    {
+                        "nazwa": "Narzędzia chirurgiczne",
+                        "opis": "Narzędzia, którymi personel medyczny posługuje się podczas operacji",
+                        "zdjecie": "4_images/narzedzia.png"
+                    }
+                ]
+            }
+        ]
+    }
