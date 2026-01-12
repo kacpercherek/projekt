@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wizualizacja Szpitala - Projekt Zaliczeniowy</title>
     <link rel="stylesheet" href="2_css/style.css">
+
 </head>
+
 <body>
 
     <header>
@@ -17,14 +21,17 @@
         <div id="widok-start">
             <h2>Wybierz poziom placówki:</h2>
             <div class="nawigacja-startowa">
+
                 <button onclick="pokazPietro('widok-parter')">
                     <strong>Parter</strong><br>
                     <small>SOR, OIOM, Pediatria</small>
                 </button>
+
                 <button onclick="pokazPietro('widok-pietro1')">
                     <strong>I Piętro</strong><br>
                     <small>Specjalistyka, Diagnostyka (MRI, CT)</small>
                 </button>
+
                 <a href="usterka.php" style="text-decoration: none;">
                     <button>
                         <strong>Zgłoś Usterkę</strong><br>
@@ -33,6 +40,7 @@
                 </a>
 
             </div>
+
         </div>
 
         <div id="widok-parter" class="widok-pietra">
@@ -50,6 +58,7 @@
             </div>
             <div id="kontener-mapy-1" class="mapa-szpitala"></div>
         </div>
+
     </main>
 
     <div id="modal-sprzet" class="modal">
@@ -64,4 +73,5 @@
     <script src="3_js/script.js"></script>
 
 </body>
+
 </html>

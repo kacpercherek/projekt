@@ -97,8 +97,9 @@ input[type="submit"]:hover {
     </head>
 
     <body>
+        
         <div class="form-container">
-            <a href="index.php" class="btn-back">⬅ Wróc do mapy szpitala</a> <!--przycisk do powrotu!-->
+            <a href="index.html" class="btn-back">⬅ Wróc do mapy szpitala</a> <!--przycisk do powrotu!-->
 
             <h2>Zgłoś awarię </h2>
             <p>Wypełnij formularz zgłoszeniowy.<p>

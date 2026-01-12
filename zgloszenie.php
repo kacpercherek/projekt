@@ -111,7 +111,7 @@ h1 {
                     echo "<strong>Opis Usterki:</strong><br>" . htmlspecialchars($opis);
                     echo "</div>";
 
-                    echo "<a href='index.php' class='btn'>Wróc do strony głównej</a>"; //przycisk do powrotu na main
+                    echo "<a href='index.html' class='btn'>Wróc do strony głównej</a>"; //przycisk do powrotu na main
                 } else {   //co jak bedzie blad zapisu
                     echo "<h2 style='color:red'>Wystąpił błąd.</h2>";
                     echo "<p>Nie udało się zapisać zgłoszenia. </p>";
