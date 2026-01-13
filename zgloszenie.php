@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewort" content="width=device-witdth, initial-scale=1.0">
         <title>Potwierdzenie zgłoszenia</title>
-        
+        <link rel="stylesheet" href="2_css/style.css">
     </head>
 
     <body class="body-formularz">
