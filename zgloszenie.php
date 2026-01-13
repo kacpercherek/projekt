@@ -1,64 +1,89 @@
+<?php
+
+$sukces = false; //false, bo nic nie wyslano
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") { //sprawdzenie czy sie kliknelo w wyslij 
+
+$servername = "localhost";  //klucze do xamppa
+$username = "root";
+$password = "";
+$dbname = "serwer_tpsi";
+
+$conn = new mysqli($servername, $username, $password, $dbname); //otwieranie polaczenia z baza
+$conn ->set_charset("utf-8");
+
+if ($conn->connect_error) {
+    die("Błąd połączenia: " . $conn->connect_error);  //jak bedzie blad to pokaze ten komunikat
+}
+
+$sprzet = $_POST['sprzet'];
+$opis = $_POST['opis'];
+
+$stmt = $conn->prepare("INSERT INTO zgloszenia (nazwa_sprzet, opis_usterki) VALUES (?, ?)"); //ZABEZPIECZENIE, nie daje znakow bezposrednio, tylko ?
+$stmt->bind_param("ss", $sprzet, $opis); // w znaki zapytania daje sprzet i opis
+
+if ($stmt->execute()) {
+    $sukces = true; //jak sie uda zapisac to na true 
+} else {
+    echo "Błąd: " . $stmt->error;
+}
+
+$stmt->close(); //zamykanie polaczenia z baza
+$conn->close();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
     <head>
+
         <meta charset="UTF-8">
-        <meta name="viewort" content="width=device-witdth, initial-scale=1.0">
-        <title>Potwierdzenie zgłoszenia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zgłoszenie</title>
         <link rel="stylesheet" href="2_css/style.css">
+
     </head>
 
     <body class="body-formularz">
 
-        <div class="card">
+        <div class="form-container">
 
-            <?php
-            
-            $servername = "localhost";     //połaczenie z baza
-            $username = "root";
-            $password = "";
-            $dbname = "serwer_tpsi";
+            <?php if ($suckes == true): ?>
 
-            $conn = new mysqli($servername, $username, $password, $dbname);
+                <h1>Zgłoszenie zostało przyjęte</h1>
+                <p>Zgłoszenie zostało poprawnie zapisane w systemie.</p>
 
-            $conn->set_charset("utf8"); //kodowanie utf8 dla polskich znakow
+                <div class="summary-box">
+                    <strong>Sprzęt:</strong> <?php echo htmlspecialchars($sprzet); ?><br><br>
+                    <strong>Opis Usterki:</strong><br>
+                    <?php echo htmlspecialchars($opis); ?> 
+                </div>
 
-            if ($conn->connect_error) {
-               die("<p class='error-msg'>Połączenie nieudane: " . $conn->connect_error . "</p>");   //takie ala zabezpieczenie? "sprawdzenie" poprawnosci polaczenia
-            }
+                <a href="index.html" class="btn">Wróć do strony głównej</a>
 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") { //odbiera dane z formularza 
-                $sprzet = $_POST['sprzet'];
-                $opis = $_POST['opis'];
+                <?php else: ?>
 
-                $stmt = $conn->prepare("INSERT INTO zgloszenia (nazwa_sprzetu, opis_usterki) VALUES (?, ?)"); //tworzenie zapytania do SQLa
-                $stmt->bind_param("ss", $sprzet, $opis);
+                    <a href="index.html" class="btn-back">⬅Wróć do mapy szpitala</a>
 
-                if ($stmt->execute()) {
-                    echo "<div class='icon-success'></div>"; //zielony haczyk
-                    echo "<h1>Zgłoszenie zostało przyjęte.</h1>"; // nagłówek, ze sie udalo 
-                    echo "<p>Zgłoszenie zostało poprawnie zapisane w systemie.</p>";
+                    <h2>Zgłoś awarię</h2>
+                    <p>Wypełnij formularz zgłoszeniowy.</p>
 
-                    echo "<div class='summary-box'>"; //okienko z podsumowaniem co zostalo wpisane
-                    
-                    echo "<strong>Sprzęt:</strong> " . htmlspecialchars($sprzet) . "<br><br>"; //special chars chroni przed wpisywaniem znakow specjalnych-zamienia na zwykly tekst
-                    echo "<strong>Opis Usterki:</strong><br>" . htmlspecialchars($opis);
-                    echo "</div>";
+                    <form action="" method="POST">
 
-                    echo "<a href='index.html' class='btn'>Wróc do strony głównej</a>"; //przycisk do powrotu na main
-                } else {   //co jak bedzie blad zapisu
-                    echo "<h2 style='color:red'>Wystąpił błąd.</h2>";
-                    echo "<p>Nie udało się zapisać zgłoszenia. </p>";
-                    echo "<p class='error-msg'>" . $stmt->error . "</p>"; //dokladny blad z bazy danych
-                    echo "<a href='usterka.php' class='btn' style='background-color:#6c757d'>Spróbuj ponownie</a>";
-                }
-                $stmt->close(); //zamkniecie zapytania
-            } else {
-                echo "<p>Brak danych do przetworzenia.</p>"; //wpisanie zgloszenie.php recznie a nie z formularza
-                echo "<a href='index.php' class='btn'>Wróć</a>";
-            }
+                    <label>Nazwa Sprzętu:</label>
+                    <input type="text" name="sprzet" placeholder="np. Defibrylator" required>
 
-            $conn->close(); //koniec polaczenia z baza danych 
-            ?>
+                    <label>Opis Usterki:</label>
+                    <textarea name="opis" rows="5" placeholder="Opisz usterkę" required></textarea>
+
+                    <input type="submit" value="Wyślij zgłoszenie">
+
+                    </form>
+
+                    <?php endif; ?>
+                
         </div>
+
     </body>
+    
 </html>
