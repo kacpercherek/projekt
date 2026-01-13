@@ -1,8 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 $sukces = false; //false, bo nic nie wyslano
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { //sprawdzenie czy sie kliknelo w wyslij 
