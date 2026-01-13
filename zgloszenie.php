@@ -4,77 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewort" content="width=device-witdth, initial-scale=1.0">
         <title>Potwierdzenie zgłoszenia</title>
-        <style>
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #f0f2f5;
-                display: flex;
-                justify-content: center; /*wysrodkowanie w poziomie i pionie*/
-                align-items: center;
-                height: 100vh;
-                margin: 0; /*usuwam domyslne marginesy przegladarki*/
-}
-
-.card { /*biała karta*/
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /*cien pod karta*/
-    text-align: center;
-    max-width: 450px;
-    width: 100%;   /*male ekrany=100% szerokosci*/
-}
-
-.icon-success {
-    color: #28a745;
-    font-size: 60px;
-    margin-bottom: 10px;
-}
-
-h1 {
-    color: #333;    /*ciemny kolor naglowka*/
-    margin-top: 0;
-}
-
-.summary-box {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px; /*wewnetrxzne odstepy*/
-    border-radius: 5px;  /*zaokraglone rogi*/
-    text-align: left;
-    margin: 20px 0;
-    color: #555;
-    font-size: 14px;
-}
-
-.summary-box strong {
-    color: #333;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none; /*usuwam podkreslenie linku*/
-    border-radius: 5px;
-    font-weight: bold;  /*pogrubiona czcionka*/
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
-.error-msg { /*wyswietli sie gdy bedzei blad zapisu blub awaria pilaczenia*/
-    color: red;
-    font-weight: bold;
-}
-</style>
-
+        
     </head>
 
-    <body>
+    <body class="body-formularz">
 
         <div class="card">
 

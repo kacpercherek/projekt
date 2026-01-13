@@ -164,4 +164,112 @@ button:hover {
     cursor: pointer;
 }
 
+.body-formularz {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container, .card { /*biała karta*/
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.form-container h2, .card h1 { /*nagłowki w formularzachj*/
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.form-container p, .card p {
+    color: #666;
+        margin-bottom: 20px;
+        font-size: 14px;
+}
+
+.form-container input[type="text"], /*pola do wpisywania*/
+.form-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 100%;
+}
+
+.form-container label { /*etykiety nad polami*/
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-container input[type="submit"],    /*przyciski*/
+.btn, .btn-back {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transform: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-container input[type="submit"]:hover, .btn:hover { 
+    background-color: #218838;
+}
+
+.btn-back { /*ten maly niebieski przycisk do powrotu*/
+    background-color: transparent;
+    color: #007bff;
+    width: auto;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-back:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.summary-box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    margin: 20px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.error-msg {
+    color: red;
+    font-weight: bold;
+}
 
