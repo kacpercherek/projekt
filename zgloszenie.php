@@ -1,5 +1,8 @@
 <?php
 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 $sukces = false; //false, bo nic nie wyslano
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { //sprawdzenie czy sie kliknelo w wyslij 
@@ -10,7 +13,7 @@ $password = "";
 $dbname = "serwer_tpsi";
 
 $conn = new mysqli($servername, $username, $password, $dbname); //otwieranie polaczenia z baza
-$conn ->set_charset("utf-8");
+$conn ->set_charset("utf8");
 
 if ($conn->connect_error) {
     die("Błąd połączenia: " . $conn->connect_error);  //jak bedzie blad to pokaze ten komunikat
@@ -19,7 +22,7 @@ if ($conn->connect_error) {
 $sprzet = $_POST['sprzet'];
 $opis = $_POST['opis'];
 
-$stmt = $conn->prepare("INSERT INTO zgloszenia (nazwa_sprzet, opis_usterki) VALUES (?, ?)"); //ZABEZPIECZENIE, nie daje znakow bezposrednio, tylko ?
+$stmt = $conn->prepare("INSERT INTO zgloszenia (nazwa_sprzetu, opis_usterki) VALUES (?, ?)"); //ZABEZPIECZENIE, nie daje znakow bezposrednio, tylko ?
 $stmt->bind_param("ss", $sprzet, $opis); // w znaki zapytania daje sprzet i opis
 
 if ($stmt->execute()) {
@@ -48,7 +51,7 @@ $conn->close();
 
         <div class="form-container">
 
-            <?php if ($suckes == true): ?>
+            <?php if ($sukces == true): ?>
 
                 <h1>Zgłoszenie zostało przyjęte</h1>
                 <p>Zgłoszenie zostało poprawnie zapisane w systemie.</p>
@@ -85,5 +88,5 @@ $conn->close();
         </div>
 
     </body>
-    
+
 </html>
